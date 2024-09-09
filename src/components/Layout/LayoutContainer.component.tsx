@@ -49,7 +49,7 @@ const LayoutContainer = () => {
                                 if (categoryType === 'disliked' && !recipe.isDisliked) {
                                     return false;
                                 }
-                                if (categoryType === 'festive' && !recipe.isFestive) {
+                                if (categoryType === 'festive' && recipe.isFestive !== true) {
                                     return false;
                                 }
                             }
@@ -69,7 +69,7 @@ const LayoutContainer = () => {
                 </div>
             </S.WrapperContent>
             <S.FooterStyles style={{ textAlign: 'center' }}>
-                Medyanenko Design ©{new Date().getFullYear()}
+                Medyanenko ©{new Date().getFullYear()}
             </S.FooterStyles>
         </S.LayoutStyles>
     );

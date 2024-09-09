@@ -6,9 +6,10 @@ export const mealTypeTranslations = {
 };
 
 export const dishTypeTranslations = {
-  sandwich: "Бутерброди",
-  salad: "Салати",
-  soup: "Супи",
+  snack: "Закуска",
+  sandwich: "Бутерброд",
+  salad: "Салат",
+  soup: "Суп",
   main: "Основні",
   sweet: "Солодкі",
 };

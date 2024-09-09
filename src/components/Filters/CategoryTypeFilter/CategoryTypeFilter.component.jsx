@@ -15,7 +15,6 @@ const CategoryTypeFilter = ({ setCategoryType }) => {
       onChange={handleCategoryTypeChange}
       allowClear
     >
-      <Option value='all'>Всі</Option>
       <Option value='favorite'>Улюблені</Option>
       <Option value='festive'>Святкові</Option>
       <Option value='disliked'>Несмачні</Option>

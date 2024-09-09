@@ -15,6 +15,7 @@ const DishTypeFilter = ({setDishType}) => {
       onChange={handleDishTypeChange}
       allowClear
     >
+      <Option value="snack">Закуски</Option>
       <Option value="sandwich">Бутерброди</Option>
       <Option value="salad">Салати</Option>
       <Option value="soup">Супи</Option>
