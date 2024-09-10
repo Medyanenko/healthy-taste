@@ -13,6 +13,7 @@ const SearchFilter = ({ setSearchQuery }) => {
       placeholder="Пошук рецепта"
       onSearch={handleSearch}
       style={{ flexGrow: 1 }}
+      allowClear
     />
   );
 };
