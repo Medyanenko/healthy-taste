@@ -264,15 +264,15 @@ html body {
     min-width: 120px;
     width: 150;
     margin-right: 5px;
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
     .ant-select-clear {
       font-size: 24px;
       top: 33%;
       height: 25px;
       width: 20px;
-    }
-  }
-`,{Option:Vf}=Jr,XF=({setCategoryType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Категорія",onChange:t,allowClear:!0,children:[Ie.jsx(Vf,{value:"favorite",children:"Улюблені"}),Ie.jsx(Vf,{value:"festive",children:"Святкові"}),Ie.jsx(Vf,{value:"disliked",children:"Несмачні"})]})},{Option:y1}=Jr,QF=({setMenuType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип меню",onChange:t,allowClear:!0,children:[Ie.jsx(y1,{value:"vegan",children:"Веган"}),Ie.jsx(y1,{value:"meat",children:"Класичне"})]})},{Option:pu}=Jr,YF=({setMealType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип прийому їжі",onChange:t,allowClear:!0,children:[Ie.jsx(pu,{value:"breakfast",children:"Сніданок"}),Ie.jsx(pu,{value:"lunch",children:"Обід"}),Ie.jsx(pu,{value:"dinner",children:"Вечеря"}),Ie.jsx(pu,{value:"snack",children:"Перекус"})]})},{Option:Yi}=Jr,ZF=({setDishType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип страви",onChange:t,allowClear:!0,children:[Ie.jsx(Yi,{value:"snack",children:"Закуски"}),Ie.jsx(Yi,{value:"sandwich",children:"Бутерброди"}),Ie.jsx(Yi,{value:"salad",children:"Салати"}),Ie.jsx(Yi,{value:"soup",children:"Супи"}),Ie.jsx(Yi,{value:"main",children:"Основні"}),Ie.jsx(Yi,{value:"sweet",children:"Солодкі"})]})},{Search:JF}=Ja,ez=({setSearchQuery:e})=>{const t=n=>{e(n)};return Ie.jsx(JF,{placeholder:"Пошук рецепта",onSearch:t,style:{flexGrow:1},allowClear:!0})},tz={breakfast:"Сніданок",lunch:"Обід",dinner:"Вечеря",snack:"Перекус"},nz={snack:"Закуска",sandwich:"Бутерброд",salad:"Салат",soup:"Суп",main:"Основні",sweet:"Солодкі"},rz=Er(xd)`
+    } */
+  //}
+`,{Option:Vf}=Jr,XF=({setCategoryType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Категорія",onChange:t,allowClear:!0,size:"large",children:[Ie.jsx(Vf,{value:"favorite",children:"Улюблені"}),Ie.jsx(Vf,{value:"festive",children:"Святкові"}),Ie.jsx(Vf,{value:"disliked",children:"Несмачні"})]})},{Option:y1}=Jr,QF=({setMenuType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип меню",onChange:t,allowClear:!0,size:"large",children:[Ie.jsx(y1,{value:"vegan",children:"Веган"}),Ie.jsx(y1,{value:"meat",children:"Класичне"})]})},{Option:pu}=Jr,YF=({setMealType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип прийому їжі",onChange:t,allowClear:!0,size:"large",children:[Ie.jsx(pu,{value:"breakfast",children:"Сніданок"}),Ie.jsx(pu,{value:"lunch",children:"Обід"}),Ie.jsx(pu,{value:"dinner",children:"Вечеря"}),Ie.jsx(pu,{value:"snack",children:"Перекус"})]})},{Option:Yi}=Jr,ZF=({setDishType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип страви",onChange:t,allowClear:!0,size:"large",children:[Ie.jsx(Yi,{value:"snack",children:"Закуски"}),Ie.jsx(Yi,{value:"sandwich",children:"Бутерброди"}),Ie.jsx(Yi,{value:"salad",children:"Салати"}),Ie.jsx(Yi,{value:"soup",children:"Супи"}),Ie.jsx(Yi,{value:"main",children:"Основні"}),Ie.jsx(Yi,{value:"sweet",children:"Солодкі"})]})},{Search:JF}=Ja,ez=({setSearchQuery:e})=>{const t=n=>{e(n)};return Ie.jsx(JF,{placeholder:"Пошук рецепта",onSearch:t,style:{flexGrow:1},allowClear:!0,size:"large"})},tz={breakfast:"Сніданок",lunch:"Обід",dinner:"Вечеря",snack:"Перекус"},nz={snack:"Закуска",sandwich:"Бутерброд",salad:"Салат",soup:"Суп",main:"Основні",sweet:"Солодкі"},rz=Er(xd)`
   width: 300px;
   margin: 16px auto;
   max-height: 350px;
@@ -321,7 +321,7 @@ html body {
     align-items: center;
     background-color: #89b0ae;
     @media (max-width: 768px) {
-        height: 220px;
+        height: 260px;
         main{
         display: flex;
         flex-direction: column;
@@ -329,10 +329,10 @@ html body {
         div{
             width: auto;
             margin: 0%;
-            height: 40px;
+            /* height: 40px; */
         }
     }
-    }
+}
 `,gz=Er(fz)`
     text-align: center;
 `,pz=()=>{const[e,t]=s.useState(null),[n,r]=s.useState(null),[o,i]=s.useState(null),[a,l]=s.useState(null),[u,c]=s.useState(""),[d,f]=s.useState([]);s.useEffect(()=>{const p=[...K8].sort(()=>Math.random()-.5);f(p)},[]);const v=s.useMemo(()=>{const p=JSON.parse(localStorage.getItem("favorites"))||[],b=JSON.parse(localStorage.getItem("dislikes"))||[];return d.filter(y=>{if(a&&y.meal!==a||n&&(n==="vegan"?!y.vegan:y.vegan)||o&&y.type!==o||e&&(e==="favorite"&&!p.includes(y.title)||e==="disliked"&&!b.includes(y.title)||e==="festive"&&!y.isFestive))return!1;if(u){const S=u.toLowerCase().split(" ").filter(Boolean),h=Object.entries(y.ingredients).flatMap(([m,g])=>typeof g=="object"?Object.keys(g):[m]).join(" ").toLowerCase();return S.every(m=>y.title.toLowerCase().includes(m)||h.includes(m))}return!0})},[d,e,n,o,a,u]);return Ie.jsxs(vz,{children:[Ie.jsx(mz,{children:Ie.jsxs(S1,{children:[Ie.jsx(YF,{setMealType:l}),Ie.jsx(ZF,{setDishType:i}),Ie.jsx(XF,{setCategoryType:t}),Ie.jsx(QF,{setMenuType:r}),Ie.jsx(ez,{setSearchQuery:c})]})}),Ie.jsx(S1,{children:Ie.jsx("div",{className:"wrapper-recipe-card",children:v.map((p,b)=>Ie.jsx(sz,{recipe:p},b))})}),Ie.jsxs(gz,{style:{textAlign:"center"},children:["Medyanenko ©",new Date().getFullYear()]})]})},hz=()=>Ie.jsx(Mi,{theme:U8,children:Ie.jsx(pz,{})});FS(document.getElementById("root")).render(Ie.jsx(s.StrictMode,{children:Ie.jsx(hz,{})}));
