@@ -322,6 +322,7 @@ html body {
     background-color: #89b0ae;
     @media (max-width: 768px) {
         height: 260px;
+        padding: 30px;
         main{
         display: flex;
         flex-direction: column;
