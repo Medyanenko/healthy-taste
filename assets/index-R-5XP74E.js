@@ -267,8 +267,9 @@ html body {
     @media (max-width: 768px) {
     .ant-select-clear {
       font-size: 24px;
-      top: 30%;
-      right: 5%;
+      top: 33%;
+      height: 25px;
+      width: 20px;
     }
   }
 `,{Option:Vf}=Jr,XF=({setCategoryType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Категорія",onChange:t,allowClear:!0,children:[Ie.jsx(Vf,{value:"favorite",children:"Улюблені"}),Ie.jsx(Vf,{value:"festive",children:"Святкові"}),Ie.jsx(Vf,{value:"disliked",children:"Несмачні"})]})},{Option:y1}=Jr,QF=({setMenuType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип меню",onChange:t,allowClear:!0,children:[Ie.jsx(y1,{value:"vegan",children:"Веган"}),Ie.jsx(y1,{value:"meat",children:"Класичне"})]})},{Option:pu}=Jr,YF=({setMealType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип прийому їжі",onChange:t,allowClear:!0,children:[Ie.jsx(pu,{value:"breakfast",children:"Сніданок"}),Ie.jsx(pu,{value:"lunch",children:"Обід"}),Ie.jsx(pu,{value:"dinner",children:"Вечеря"}),Ie.jsx(pu,{value:"snack",children:"Перекус"})]})},{Option:Yi}=Jr,ZF=({setDishType:e})=>{const t=n=>{e(n)};return Ie.jsxs(Td,{placeholder:"Тип страви",onChange:t,allowClear:!0,children:[Ie.jsx(Yi,{value:"snack",children:"Закуски"}),Ie.jsx(Yi,{value:"sandwich",children:"Бутерброди"}),Ie.jsx(Yi,{value:"salad",children:"Салати"}),Ie.jsx(Yi,{value:"soup",children:"Супи"}),Ie.jsx(Yi,{value:"main",children:"Основні"}),Ie.jsx(Yi,{value:"sweet",children:"Солодкі"})]})},{Search:JF}=Ja,ez=({setSearchQuery:e})=>{const t=n=>{e(n)};return Ie.jsx(JF,{placeholder:"Пошук рецепта",onSearch:t,style:{flexGrow:1},allowClear:!0})},tz={breakfast:"Сніданок",lunch:"Обід",dinner:"Вечеря",snack:"Перекус"},nz={snack:"Закуска",sandwich:"Бутерброд",salad:"Салат",soup:"Суп",main:"Основні",sweet:"Солодкі"},rz=Er(xd)`
