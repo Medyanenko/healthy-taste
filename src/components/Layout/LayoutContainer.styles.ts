@@ -23,7 +23,8 @@ export const HeaderStyles = styled(Header)`
     align-items: center;
     background-color: #89b0ae;
     @media (max-width: 768px) {
-        height: 220px;
+        height: 260px;
+        padding: 40px;
         main{
         display: flex;
         flex-direction: column;
@@ -33,7 +34,7 @@ export const HeaderStyles = styled(Header)`
             margin: 0%;
         }
     }
-    }
+}
 `;
 export const FooterStyles = styled(Footer)`
     text-align: center;

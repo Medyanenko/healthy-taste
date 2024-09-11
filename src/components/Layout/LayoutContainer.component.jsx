@@ -70,9 +70,9 @@ const LayoutContainer = () => {
     <S.LayoutStyles>
       <S.HeaderStyles>
         <S.WrapperContent>
-          <CategoryTypeFilter setCategoryType={setCategoryType} />
           <MealTypeFilter setMealType={setMealType} />
           <DishTypeFilter setDishType={setDishType} />
+          <CategoryTypeFilter setCategoryType={setCategoryType} />
           <MenuTypeFilter setMenuType={setMenuType} />
           <SearchFilter setSearchQuery={setSearchQuery} />
         </S.WrapperContent>

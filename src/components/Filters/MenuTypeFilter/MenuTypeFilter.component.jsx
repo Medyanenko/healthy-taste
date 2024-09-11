@@ -14,6 +14,7 @@ const MenuTypeFilter = ({ setMenuType }) => {
       placeholder='Тип меню'
       onChange={handleMenuTypeChange}
       allowClear
+      size='large'
     >
       <Option value='vegan'>Веган</Option>
       <Option value='meat'>Класичне</Option>

@@ -14,6 +14,7 @@ const DishTypeFilter = ({setDishType}) => {
       placeholder="Тип страви"
       onChange={handleDishTypeChange}
       allowClear
+      size='large'
     >
       <Option value="snack">Закуски</Option>
       <Option value="sandwich">Бутерброди</Option>

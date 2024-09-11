@@ -66,7 +66,7 @@ const RecipeCard = ({ recipe }) => {
         ) : null
       }
     >
-      <Tooltip title={isFavorite ? "Не вразило" : "Приготуй мене ще раз"}>
+      <Tooltip title={isFavorite ? "Приготую ще раз" : "Не вразило"}>
         <S.FavoriteButton
           icon={
             isFavorite ? (
@@ -80,7 +80,7 @@ const RecipeCard = ({ recipe }) => {
           right="30px"
         />
       </Tooltip>
-      <Tooltip title={isDisliked ? "Дай ще один шанс" : "Гидота яка"}>
+      <Tooltip title={isDisliked ? "Гидота яка" : " Даю ще один шанс"}>
         <S.FavoriteButton
           icon={
             isDisliked ? (

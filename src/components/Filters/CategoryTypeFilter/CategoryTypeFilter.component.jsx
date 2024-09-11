@@ -14,6 +14,7 @@ const CategoryTypeFilter = ({ setCategoryType }) => {
       placeholder='Категорія'
       onChange={handleCategoryTypeChange}
       allowClear
+      size='large'
     >
       <Option value='favorite'>Улюблені</Option>
       <Option value='festive'>Святкові</Option>

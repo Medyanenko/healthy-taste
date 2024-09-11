@@ -14,6 +14,7 @@ const SearchFilter = ({ setSearchQuery }) => {
       onSearch={handleSearch}
       style={{ flexGrow: 1 }}
       allowClear
+      size="large"
     />
   );
 };

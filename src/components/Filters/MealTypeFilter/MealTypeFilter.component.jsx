@@ -14,6 +14,7 @@ const MealTypeFilter = ({ setMealType }) => {
       placeholder="Тип прийому їжі"
       onChange={handleMealTypeChange}
       allowClear
+      size='large'
     >
       <Option value="breakfast">Сніданок</Option>
       <Option value="lunch">Обід</Option>
