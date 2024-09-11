@@ -268,7 +268,7 @@ html body {
     .ant-select-clear {
       font-size: 24px;
       top: 31%;
-      height: 25px;
+      height: 24px;
       width: 20px;
     }
   }
