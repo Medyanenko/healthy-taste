@@ -267,8 +267,8 @@ html body {
     @media (max-width: 768px) {
     .ant-select-clear {
       font-size: 24px;
-      top: 31%;
-      height: 24px;
+      top: 31.5%;
+      height: 25px;
       width: 20px;
     }
   }
