@@ -61,7 +61,7 @@ const RecipeCard = ({ recipe }) => {
           <img
             alt={title}
             src={image}
-            style={{ height: 200, objectFit: "cover", width: "100%" }}
+            style={{ height: 200, objectFit: "fill", width: "100%" }}
           />
         ) : null
       }
