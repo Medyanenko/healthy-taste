@@ -24,7 +24,7 @@ const LayoutContainer = () => {
   const filterRecipes = useMemo(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     const dislikes = JSON.parse(localStorage.getItem("dislikes")) || [];
-
+  
     return shuffledRecipes.filter((recipe) => {
       if (mealType && recipe.meal !== mealType) {
         return false;
