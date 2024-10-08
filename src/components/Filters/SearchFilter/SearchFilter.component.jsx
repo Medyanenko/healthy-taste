@@ -12,7 +12,7 @@ const SearchFilter = ({ setSearchQuery }) => {
       message.error("Не валідний пошуковий запит");
       return;
     }
-    const validPattern = /^[a-zA-Zа-яА-Я\s]*$/;
+    const validPattern = /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ'\s]*$/;
     if (!validPattern.test(sanitizedValue)) {
       message.error("Не валідний пошуковий запит");
       return;
