@@ -1,5 +1,17 @@
 :root {
-  font-family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --cream:  #fdf8f3;
+  --warm:   #f5ece0;
+  --terra:  #b5603a;
+  --terra2: #d4785a;
+  --olive:  #5c6b3a;
+  --sage:   #8fa068;
+  --brown:  #3d2b1f;
+  --sand:   #c9a87a;
+  --text:   #2a1f17;
+  --muted:  #9d8878;
+  --border: #e8ddd4;
+
+  font-family: 'DM Sans', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -8,12 +20,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  background: var(--cream);
+  color: var(--text);
 }
