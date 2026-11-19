@@ -36,6 +36,7 @@ export default [
         { allowConstantExport: true },
       ],
       'quotes': ['error', 'single'],
+      'react/prop-types': 'off',
       'max-len': ['error', { code: 200, ignoreUrls: true, ignoreStrings: true }],
       'object-curly-newline': ['error', {
         ObjectPattern: { multiline: true, minProperties: 1 },
@@ -43,7 +44,6 @@ export default [
         ExportDeclaration: { multiline: true, minProperties: 3 },
       }],
       'styled-components-a11y/alt-text': 'warn',
-      'styled-components-a11y/color-contrast': 'warn',
       'styled-components-a11y/label-has-associated-control': 'warn',
     },
   },

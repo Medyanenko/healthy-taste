@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import { message } from "antd";
-import DOMPurify from "dompurify";
-import styled from "styled-components";
+import { useRef } from 'react';
+import { message } from 'antd';
+import DOMPurify from 'dompurify';
+import styled from 'styled-components';
 
 const SearchWrap = styled.div`
   position: relative;
@@ -61,7 +61,9 @@ const ClearBtn = styled.button`
   }
 `;
 
-const SearchFilter = ({ setSearchQuery }) => {
+const SearchFilter = ({
+ setSearchQuery 
+}) => {
   const inputRef = useRef(null);
 
   const validate = (value) => {
@@ -69,26 +71,26 @@ const SearchFilter = ({ setSearchQuery }) => {
     if (!sanitized.trim()) return null;
     const validPattern = /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ'\s]*$/;
     if (!validPattern.test(sanitized)) {
-      message.error("Не валідний пошуковий запит");
+      message.error('Не валідний пошуковий запит');
       return null;
     }
     return sanitized;
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       const result = validate(e.target.value);
       if (result !== null) setSearchQuery(result);
     }
   };
 
   const handleChange = (e) => {
-    if (!e.target.value) setSearchQuery("");
+    if (!e.target.value) setSearchQuery('');
   };
 
   const handleClear = () => {
-    if (inputRef.current) inputRef.current.value = "";
-    setSearchQuery("");
+    if (inputRef.current) inputRef.current.value = '';
+    setSearchQuery('');
   };
 
   return (

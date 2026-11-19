@@ -1,10 +1,13 @@
-import React from 'react';
 import { Select } from 'antd';
 import * as S from '../WrapperFilterStyles.styles';
 
-const { Option } = Select;
+const {
+ Option 
+} = Select;
 
-const CategoryTypeFilter = ({ setCategoryType }) => {
+const CategoryTypeFilter = ({
+ setCategoryType 
+}) => {
   const handleCategoryTypeChange = (value) => {
     setCategoryType(value);
   };

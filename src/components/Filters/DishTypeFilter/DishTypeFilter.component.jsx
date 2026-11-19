@@ -1,10 +1,13 @@
-import React from "react";
-import { Select } from "antd";
-import * as S from "../WrapperFilterStyles.styles";
+import { Select } from 'antd';
+import * as S from '../WrapperFilterStyles.styles';
 
-const { Option } = Select;
+const {
+ Option 
+} = Select;
 
-const DishTypeFilter = ({setDishType}) => {
+const DishTypeFilter = ({
+setDishType
+}) => {
   const handleDishTypeChange = (value) => {
     setDishType(value);
   };

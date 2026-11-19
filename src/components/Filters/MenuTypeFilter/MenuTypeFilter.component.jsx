@@ -1,10 +1,13 @@
-import React from 'react';
 import { Select } from 'antd';
 import * as S from '../WrapperFilterStyles.styles';
 
-const { Option } = Select;
+const {
+ Option 
+} = Select;
 
-const MenuTypeFilter = ({ setMenuType }) => {
+const MenuTypeFilter = ({
+ setMenuType 
+}) => {
   const handleMenuTypeChange = (value) => {
     setMenuType(value);
   };

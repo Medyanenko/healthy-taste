@@ -1,19 +1,21 @@
-import React, { useState, useEffect, useMemo } from "react";
-import recipeData from "../../state/state.json";
-import CategoryTypeFilter from "../Filters/CategoryTypeFilter/CategoryTypeFilter.component.jsx";
-import MenuTypeFilter from "../Filters/MenuTypeFilter/MenuTypeFilter.component.jsx";
-import MealTypeFilter from "../Filters/MealTypeFilter/MealTypeFilter.component.jsx";
-import DishTypeFilter from "../Filters/DishTypeFilter/DishTypeFilter.component.jsx";
-import SearchFilter from "../Filters/SearchFilter/SearchFilter.component.jsx";
-import RecipeCard from "../RecipeCard/RecipeCard.component.jsx";
-import * as S from "./LayoutContainer.styles";
+import {
+ useState, useEffect, useMemo 
+} from 'react';
+import recipeData from '../../state/state.json';
+import CategoryTypeFilter from '../Filters/CategoryTypeFilter/CategoryTypeFilter.component.jsx';
+import MenuTypeFilter from '../Filters/MenuTypeFilter/MenuTypeFilter.component.jsx';
+import MealTypeFilter from '../Filters/MealTypeFilter/MealTypeFilter.component.jsx';
+import DishTypeFilter from '../Filters/DishTypeFilter/DishTypeFilter.component.jsx';
+import SearchFilter from '../Filters/SearchFilter/SearchFilter.component.jsx';
+import RecipeCard from '../RecipeCard/RecipeCard.component.jsx';
+import * as S from './LayoutContainer.styles';
 
 const FOOD_TILES = [
-  { emoji: "🥗", bg: "linear-gradient(160deg,#3a2008,#7a4818)", w: 110, h: 130, mt: 0 },
-  { emoji: "🍜", bg: "linear-gradient(160deg,#1e3010,#3a5820)", w: 100, h: 100, mt: 16 },
-  { emoji: "🫐", bg: "linear-gradient(160deg,#3a2808,#7a5818)", w: 110, h: 150, mt: -12 },
-  { emoji: "🥩", bg: "linear-gradient(160deg,#2a1808,#6a3818)", w: 100, h: 110, mt: 20 },
-  { emoji: "🍋", bg: "linear-gradient(160deg,#2a1a08,#604020)", w: 110, h: 130, mt: -8 },
+  { emoji: '🥗', bg: 'linear-gradient(160deg,#3a2008,#7a4818)', w: 110, h: 130, mt: 0 },
+  { emoji: '🍜', bg: 'linear-gradient(160deg,#1e3010,#3a5820)', w: 100, h: 100, mt: 16 },
+  { emoji: '🫐', bg: 'linear-gradient(160deg,#3a2808,#7a5818)', w: 110, h: 150, mt: -12 },
+  { emoji: '🥩', bg: 'linear-gradient(160deg,#2a1808,#6a3818)', w: 100, h: 110, mt: 20 },
+  { emoji: '🍋', bg: 'linear-gradient(160deg,#2a1a08,#604020)', w: 110, h: 130, mt: -8 },
 ];
 
 const LayoutContainer = () => {
@@ -21,7 +23,7 @@ const LayoutContainer = () => {
   const [menuType, setMenuType] = useState(null);
   const [dishType, setDishType] = useState(null);
   const [mealType, setMealType] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [shuffledRecipes, setShuffledRecipes] = useState([]);
 
   useEffect(() => {
@@ -30,25 +32,25 @@ const LayoutContainer = () => {
   }, []);
 
   const filterRecipes = useMemo(() => {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const dislikes = JSON.parse(localStorage.getItem("dislikes")) || [];
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const dislikes = JSON.parse(localStorage.getItem('dislikes')) || [];
 
     return shuffledRecipes.filter((recipe) => {
       if (mealType && recipe.meal !== mealType) return false;
-      if (menuType && (menuType === "vegan" ? !recipe.vegan : recipe.vegan)) return false;
+      if (menuType && (menuType === 'vegan' ? !recipe.vegan : recipe.vegan)) return false;
       if (dishType && recipe.type !== dishType) return false;
       if (categoryType) {
-        if (categoryType === "favorite" && !favorites.includes(recipe.title)) return false;
-        if (categoryType === "disliked" && !dislikes.includes(recipe.title)) return false;
-        if (categoryType === "festive" && !recipe.isFestive) return false;
+        if (categoryType === 'favorite' && !favorites.includes(recipe.title)) return false;
+        if (categoryType === 'disliked' && !dislikes.includes(recipe.title)) return false;
+        if (categoryType === 'festive' && !recipe.isFestive) return false;
       }
       if (searchQuery) {
-        const searchWords = searchQuery.toLowerCase().split(" ").filter(Boolean);
+        const searchWords = searchQuery.toLowerCase().split(' ').filter(Boolean);
         const ingredientsList = Object.entries(recipe.ingredients)
           .flatMap(([key, value]) =>
-            typeof value === "object" ? Object.keys(value) : [key]
+            typeof value === 'object' ? Object.keys(value) : [key]
           )
-          .join(" ")
+          .join(' ')
           .toLowerCase();
         return searchWords.every(
           (word) =>
